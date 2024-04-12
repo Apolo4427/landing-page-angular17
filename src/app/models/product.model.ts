@@ -3,24 +3,20 @@ export interface Product {
     title:       string;
     price:       number;
     description: string;
-    images:      string[];
-    creationAt:  Date;
-    updatedAt:   Date;
     category:    Category;
+    image:       string;
+    rating:      Rating;
 }
 
-export interface Category {
-    id:         number;
-    name:       Name;
-    image:      string;
-    creationAt: Date;
-    updatedAt:  Date;
+export enum Category {
+    Electronics = "electronics",
+    Jewelery = "jewelery",
+    MenSClothing = "men's clothing",
+    WomenSClothing = "women's clothing",
 }
 
-export enum Name {
-    Clothes = "Clothes",
-    Electronics = "Electronics",
-    Furniture = "Furniture",
-    Miscellaneous = "Miscellaneous",
-    Shoes = "Shoes",
+export interface Rating {
+    rate:  number;
+    count: number;
 }
+
