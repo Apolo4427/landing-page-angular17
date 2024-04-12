@@ -27,6 +27,8 @@ export class ContactComponent implements OnInit{
   enviar(event: Event){
     event.preventDefault();
     console.log('Enviado')
+    this.contactForm.get('email')?.setValue('');
+    this.contactForm.get('mensaje')?.setValue('');
   }
 
   ngOnInit(): void {
